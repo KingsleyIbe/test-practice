@@ -1,4 +1,4 @@
-export default class mathOperation {
+ class mathOperation {
     constructor(num1, num2) {
       this.num1 = num1;
       this.num2 = num2;
@@ -20,3 +20,5 @@ export default class mathOperation {
     return (this.num1) / (this.num2);
   }
   }
+
+  module.exports = mathOperation;

@@ -1,6 +1,5 @@
-const { text } = require('stream/consumers');
 const { stringLength, reverseString, capitalize } = require('./index.js');
-import mathOperation from './math.js';
+const mathOperation = require('./math.js')
 
 const math = new mathOperation(15, 60);
 
@@ -47,31 +46,31 @@ describe('Reverse string', () => {
 });
 
 describe('Capitalize first letter of string', () => {
-it('capitalize the first letter of a given string', () => {
+  it('capitalize the first letter of a given string', () => {
     expect(capitalize('growth')).toMatch('Growth');
-});
-it('capitalize the first letter of a given string', () => {
+  });
+  it('capitalize the first letter of a given string', () => {
     expect(capitalize('microVerse')).toMatch('Microverse');
-});
-it('capitalize the first letter of a given string', () => {
+  });
+  it('capitalize the first letter of a given string', () => {
     expect(capitalize('microVersE')).toMatch('Microverse');
+  });
 });
+
+describe('My math function', () => {
+  it('adds 1 + 2 to equal 3', () => {
+    expect(math.sum()).toBe(75);
+  });
+
+  it('subtracts 10 - 5 to equal 5', () => {
+    expect(math.subtract()).toBe(-45);
+  });
+
+  it('multiplies 3 * 5 to equal 15', () => {
+    expect(math.multiply()).toBe(900);
+  });
+
+  it('divides 15 / 5 to equal 3', () => {
+    expect(math.divide()).toBe(0.25);
+  });
 });
-
-// describe('My math function', () => {
-// it('adds 1 + 2 to equal 3', () => {
-// expect(math.sum()).toBe(75);
-// });
-
-// it('subtracts 10 - 5 to equal 5', () => {
-// expect(math.subtract()).toBe(-45);
-// });
-
-// it('multiplies 3 * 5 to equal 15', () => {
-// expect(math.multiply()).toBe(900);
-// });
-
-// it('divides 15 / 5 to equal 3', () => {
-// expect(math.divide()).toBe(0.25);
-// });
-// });
